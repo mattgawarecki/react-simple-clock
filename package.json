@@ -1,0 +1,40 @@
+{
+  "name": "react-simple-clock",
+  "version": "1.0.0",
+  "author": "Matt Gawarecki",
+  "homepage": "https://github.com/mattgawarecki/react-simple-clock",
+  "bugs": {
+    "url": "https://github.com/mattgawarecki/react-simple-clock/issues",
+    "email": "matt.gawarecki@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattgawarecki/react-simple-clock.git"
+  },
+  "main": "app/js/app.js",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.12.0",
+    "lodash": "^3.10.0",
+    "dateformat": "^1.0.11"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "reactify": "^0.15.2",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  },
+  "scripts": {
+    "start": "watchify -o app/js/bundle.js -v -d app/js/app.js",
+    "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > app/js/bundle.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

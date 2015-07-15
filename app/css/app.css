@@ -1,0 +1,12 @@
+#container {
+  margin: 0 auto;
+  background-color: #CCCCCC;
+  text-align: center;
+  width: 80%;
+}
+
+.time-display {
+  font-family: sans-serif;
+  font-size: 1000%;
+  font-weight: bold;
+}
